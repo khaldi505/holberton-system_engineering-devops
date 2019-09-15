@@ -1,1 +1,2 @@
-!"/bin/bash
+#!/bin/bash
+echo Read more: https://en.wikipedia.org/wiki/Alea_iacta_est >> iacta 
