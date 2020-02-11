@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 # This script is displaying "Holberton School" 10 times
-for i in {0..10}
+for i in {10..0}
 do
 echo "Holberton School"
+i=$i-1
 done
