@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 # This script is displaying "Holberton School" 10 times
-for i in {10..1}
+for (( c=1; c<=10; c++ ))
 do
-echo "Holberton School"
-i=$i-1
+    echo "Holberton School"
 done
