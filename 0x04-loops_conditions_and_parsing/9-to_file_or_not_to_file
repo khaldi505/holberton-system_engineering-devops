@@ -15,7 +15,7 @@ if [ -e "$FILE" ]
             then
                 echo "holbertonschool file is empty"
         fi
-elif ! [ -e "$FILE" ]
+else  [ -e "$FILE" ]
     then
         echo "holbertonschool file does not exist"
 fi
