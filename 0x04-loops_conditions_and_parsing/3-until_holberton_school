@@ -5,5 +5,5 @@ counter=1
 until [ $counter -gt 10 ]
 do
     echo "Holberton School"
-    ((counter++))
+    let counter+=1
 done
