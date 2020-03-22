@@ -3,5 +3,5 @@
 FILES="*"
 for f in $FILES
 do
-  echo "$f." cut -f2 -d'-'
+  echo "$f." | cut -f2 -d'-'
 done
