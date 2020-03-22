@@ -10,8 +10,8 @@ do
    elif [ "$counter" -eq 8 ]
       then
          echo "good luck"
-      else
-         echo "$counter"
+   else
+      echo "Holberton School"
    fi
    let counter+=1
 done
