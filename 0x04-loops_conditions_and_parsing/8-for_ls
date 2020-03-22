@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
-#cript that displays files in the current dir
+#script that displays files in the current dir
 for f in *
 do
-  echo "$f." | cut -f2 -d'-'
+  echo "$f" | cut -f2 -d'-'
 done
