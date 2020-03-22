@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 #cript that displays files in the current dir
-FILES="*"
-for f in $FILES
+for f in *
 do
   echo "$f." | cut -f2 -d'-'
 done
