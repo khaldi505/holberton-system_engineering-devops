@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+#cript that displays files in the current dir
+FILES="*"
+for f in $FILES
+do
+  echo "$f."
+done
