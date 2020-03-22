@@ -11,6 +11,6 @@ do
             let minutes+=1
         done
     let hours+=1
-    let minutes=0
+    let minutes=1
 done
         
