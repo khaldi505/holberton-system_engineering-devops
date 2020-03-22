@@ -1,13 +1,24 @@
 #!/usr/bin/env bash
 # This script is displaying "Holberton School" 10 times
-i=0
-while [ $i -lt 21 ]
-do
-echo $i
-case "$i" in
-4) echo "bad luck from China";;
-9) echo "bad luck from Japan";;
-17) echo "bad luck from Italy";;
-esac
-((i++))
+counter=1
+while [ "$counter" -lt 20 ]
+do 
+    case $counter in
+        5)
+            echo "bad luck from China"
+            echo "$counter"
+            ;;
+        10)
+            echo "bad luck from Japan"
+            echo "$counter"
+            ;;
+        18)
+            echo "bad luck from Italy"
+            echo "$counter"
+            ;;
+        *)
+            echo "$counter"
+            ;;
+    esac
+    let counter+=1
 done
