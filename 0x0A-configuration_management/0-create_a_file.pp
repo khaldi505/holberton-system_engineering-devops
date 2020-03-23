@@ -1,3 +1,4 @@
+# creating a text file using puppet wiou
 file { 'holberton':
 path    => '/tmp/holberton',
 mode    => '0744',
