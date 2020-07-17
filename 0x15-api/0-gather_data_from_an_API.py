@@ -31,7 +31,7 @@ if __name__ == "__main__":
                     done += 1
                     titles += "\t" + " " + users[y]["title"] + '\n'
 
-        parg = "Employee {} is done with tasks({}/{})".format(
+        parg = "Employee {} is done with tasks({}/{}):".format(
             username, done, tasks)
         print(parg)
         print("{}".format(titles), end='')
