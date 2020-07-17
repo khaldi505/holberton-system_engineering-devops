@@ -14,14 +14,14 @@ if __name__ == "__main__":
     done = 0
     titles = ""
     username = ""
-    users = requests.get("https://jsonplaceholder.typicode.com/users")
+    users = requests.get(
+        "https://jsonplaceholder.typicode.com/users/{}".format(sys.argv[1]))
     if users.status_code == 200:
         users = users.json()
-        for x in range(len(users)):
-            if(int(sys.argv[1]) == users[x]["id"]):
-                username = users[x]["name"]
-                break
+        username = users["name"]
         users = requests.get("https://jsonplaceholder.typicode.com/todos")
+        if users.status_code != 200:
+            exit()
         users = users.json()
         for y in range(len(users)):
             if (int(sys.argv[1]) == users[y]["userId"]):
