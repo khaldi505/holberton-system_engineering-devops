@@ -15,7 +15,8 @@ if __name__ == "__main__":
     titles = ""
     username = ""
     users = requests.get(
-        "https://jsonplaceholder.typicode.com/users/{}".format(sys.argv[1]), verify=False)
+        "https://jsonplaceholder.typicode.com/users/{}".format(sys.argv[1]),
+        verify=False)
     if users.status_code == 200:
         users = users.json()
         username = users["name"]
