@@ -18,15 +18,13 @@ if __name__ == "__main__":
     x = 0
     todo_titles = []
     done = 0
-    tasks = 0
     for todo in todos:
-        tasks += 1
         if todo["completed"]:
             done += 1
             todo_titles.append(todo["title"])
     print(
         "Employee {:s} is done with tasks({:d}/{:d}):"
-        .format(user_name, done, tasks)
+        .format(user_name, done, len(todos))
         )
     for x in todo_titles:
-        print("\t {:s}".format(x))
+        print(" \t{:s}".format(x))
