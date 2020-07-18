@@ -4,33 +4,29 @@ script that, using this REST API, for a given employee ID,
 returns information about his/her
 TODO list progress.
 """
-import requests
-import sys
-
 if __name__ == "__main__":
-    if len(sys.argv) < 2:
-        exit()
-    tasks = 0
+    import requests
+    from sys import argv
+    u_id = argv[1]
+    user_name = requests.get(
+        "https://jsonplaceholder.typicode.com/users/{}".format(u_id)
+        ).json()
+    user_name = user_name["name"]
+    todos = requests.get(
+        "https://jsonplaceholder.typicode.com/todos/?userId={}".format(u_id)
+        ).json()
+    x = 0
+    todo_titles = []
     done = 0
-    titles = ""
-    username = ""
-    users = requests.get(
-        "https://jsonplaceholder.typicode.com/users/{}".format(sys.argv[1]))
-    if users.status_code == 200:
-        users = users.json()
-        username = users["name"]
-        users = requests.get("https://jsonplaceholder.typicode.com/todos")
-        if users.status_code != 200:
-            exit()
-        users = users.json()
-        for y in range(len(users)):
-            if (int(sys.argv[1]) == users[y]["userId"]):
-                tasks += 1
-                if (users[y]["completed"]):
-                    done += 1
-                    titles += "\t" + " " + users[y]["title"] + '\n'
-
-        parg = "Employee {} is done with tasks({}/{})".format(
-            username, done, tasks)
-        print(parg)
-        print("{}".format(titles), end='')
+    tasks = 0
+    for todo in todos:
+        tasks += 1
+        if todo["completed"]:
+            done += 1
+            todo_titles.append(todo["title"])
+    print(
+        "Employee {:s} is done with tasks({:d}/{:d}):"
+        .format(user_name, done, tasks)
+        )
+    for x in todo_titles:
+        print("\t {:s}".format(x))
