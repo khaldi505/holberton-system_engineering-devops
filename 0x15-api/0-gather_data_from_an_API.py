@@ -7,7 +7,7 @@ TODO list progress.
 if __name__ == "__main__":
     import requests
     from sys import argv
-    u_id = argv[1]
+    u_id = int(argv[1])
     user_name = requests.get(
         "https://jsonplaceholder.typicode.com/users?id={}".format(u_id)
         ).json()
@@ -27,4 +27,4 @@ if __name__ == "__main__":
         .format(user_name, done, len(todos))
         )
     for x in todo_titles:
-        print(" \t{:s}".format(x))
+        print("\t {:s}".format(x))
