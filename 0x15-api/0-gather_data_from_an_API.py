@@ -9,9 +9,9 @@ if __name__ == "__main__":
     from sys import argv
     u_id = argv[1]
     user_name = requests.get(
-        "https://jsonplaceholder.typicode.com/users/{}".format(u_id)
+        "https://jsonplaceholder.typicode.com/users?id={}".format(u_id)
         ).json()
-    user_name = user_name["name"]
+    user_name = user_name[0]["name"]
     todos = requests.get(
         "https://jsonplaceholder.typicode.com/todos/?userId={}".format(u_id)
         ).json()
