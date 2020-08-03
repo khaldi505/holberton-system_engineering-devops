@@ -1,1 +1,0 @@
-__ ssh is fun __
