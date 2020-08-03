@@ -1,6 +1,7 @@
-BBBBB# create a file in /tmp
+# create a file in /tmp
 
-file { '/tmp/holberton':
+file { 'holberton':
+  path    =>'/tmp/holberton',
   content =>'I love Puppet',
   owner   =>'www-data',
   group   =>'www-data',
