@@ -16,10 +16,10 @@ large changes that go undocumented.
 
 to install [puppet-lint version 2.1.1]("https://puppet.com/") first install ruby.
 
-'''bash
+```bash
 $ apt-get install -y ruby
 $ gem install puppet-lint -v 2.1.1
-'''
+```
 
 ## Genral requirements
 A README.md file at the root of the folder of the project is mandatory
