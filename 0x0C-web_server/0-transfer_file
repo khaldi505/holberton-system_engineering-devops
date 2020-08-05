@@ -1,4 +1,4 @@
-B#!/usr/bin/env bash
+#!/usr/bin/env bash
 # script that transfers a file from our client to a server using scp :)
 if [ $# -lt 3 ]
 then
