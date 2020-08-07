@@ -3,7 +3,7 @@
 sudo apt -y update
 sudo apt -y install nginx
 sudo ufw allow 'Nginx HTTP'
-sudo chown ubuntu /var/www/html/index.htm
+sudo chown ubuntu /var/www/html/index.html
 echo "Holberton School" > /var/www/html/index.html
 # adding a new redirect page
 #changing the default nginx file to redirect to the disired link
