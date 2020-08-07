@@ -5,6 +5,7 @@ sudo apt -y install nginx
 sudo ufw allow 'Nginx HTTP'
 sudo chown ubuntu /var/www/html/index.html
 echo "Holberton School" > /var/www/html/index.html
+sudo service nginx start
 # adding a new redirect page
 #changing the default nginx file to redirect to the disired link
 sudo sed -i '/listen 80 default_server/a rewrite ^/redirect_me https://www.youtube.com/watch?v=QH2-TGUlwu4 permanent;' #restarting the server
