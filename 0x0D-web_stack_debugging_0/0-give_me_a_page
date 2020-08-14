@@ -1,0 +1,4 @@
+  
+#!/usr/bin/env bash
+# restarting the web server
+sudo service apache2 start
