@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# changing the nginx conf file
+sed -i "s/sites-enabled/sites-available/" /etc/nginx/nginx.conf
+service nginx restart
