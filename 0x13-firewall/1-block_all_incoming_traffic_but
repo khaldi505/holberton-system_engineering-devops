@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-sudo apt -y update
+# nstall the ufw firewall and setup a few rules on web-01.
 sudo apt -y install ufw
 sudo ufw default deny incoming
 sudo ufw allow ssh
