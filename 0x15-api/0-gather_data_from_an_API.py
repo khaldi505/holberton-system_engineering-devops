@@ -25,7 +25,7 @@ def go_go_power_rangers():
 
     for x in todos:
         todo_list.append("\t {}".format(x["title"]))
-    print("Employee {} is done with tasks ({}:{})"
+    print("Employee {} is done with tasks({}:{}):"
           .format(name, len(todos), todo))
     for y in todo_list:
         print(y)
