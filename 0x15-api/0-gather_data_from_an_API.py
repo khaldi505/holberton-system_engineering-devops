@@ -4,10 +4,12 @@ place holder
 """
 
 
-def go_go_power_rangers():
+if __name__ == "__main__":
 
     import requests
     from sys import argv
+    if len(argv) < 2:
+        exit()
     todos = requests.get(
         "https://jsonplaceholder.typicode.com/todos?userId={}&completed=true"
         .format(argv[1]))
@@ -25,11 +27,7 @@ def go_go_power_rangers():
 
     for x in todos:
         todo_list.append("\t {}".format(x["title"]))
-    print("Employee {} is done with tasks({}:{}):"
+    print("Employee {} is done with tasks({}/{}):"
           .format(name, len(todos), todo))
     for y in todo_list:
         print(y)
-
-
-if __name__ == "__main__":
-    go_go_power_rangers()
