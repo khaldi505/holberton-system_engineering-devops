@@ -7,14 +7,15 @@ place holder
 if __name__ == "__main__":
     import requests
     import json
-    todos = requests.get(
-        "https://jsonplaceholder.typicode.com/todos")
     users = requests.get(
         "https://jsonplaceholder.typicode.com/users")
-    todos = todos.json()
     users = users.json()
     result = {}
     for user in users:
+        todos = requests.get(
+            "https://jsonplaceholder.typicode.com/todos?userId={}"
+            .format(user["id"]))
+        todos = todos.json()
         result[user["id"]] = []
         for todo in todos:
             result[user["id"]].append(
