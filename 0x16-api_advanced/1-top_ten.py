@@ -5,13 +5,11 @@
 
 def top_ten(subreddit):
     import requests
-    link = "https://www.reddit.com/r/{}/top.json?limit=10".format(subreddit)
+    link = "https://www.reddit.com/r/{}/hot.json".format(subreddit)
     result = requests.get(link, headers={"User-Agent": "Mozilla/5.0"})
     result = result.json()
-    if result["data"]["children"] == []:
-        print("None")
     try:
-        result = result["data"]["children"]
+        result = result["data"]["children"][:10]
         for x in result:
             print("{}".format(x["data"]["title"]))
     except Exception as error:
