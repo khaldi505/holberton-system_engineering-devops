@@ -1,0 +1,4 @@
+# fixes type of php files in a config file
+exec { ‘replaces line in config file’: command => ‘sed -i “s/.phpp/.php/g” /var/www/html/wp-settings.php’,
+path => ‘/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin’
+}
