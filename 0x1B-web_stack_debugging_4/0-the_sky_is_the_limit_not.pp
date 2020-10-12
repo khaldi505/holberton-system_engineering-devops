@@ -1,4 +1,4 @@
-# changing the ULIMIT var in the nginx file
+# changing the ULIMIT value
 
 exec{'ulimit_fix':
 path    => [ '/usr/local/bin/', '/bin/' ],
